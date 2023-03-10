@@ -6,18 +6,19 @@ import Rodape from "./Rodape";
 import receitas from "./receitas.json";
 
 const App = () => {
+
   const receita = receitas[1];
+
   return (
+
     <div>
-      <Cabecalho titulo={receita.titulo} descricao={receita.descricao} />
-      <Imagem src="https://github.com/mikansc.png" alt="Michael" />
-      <Ingredientes ingrediente={receita.ingredientes} />
-      <Instrucoes lista={receita.preparo} />
-      <Rodape
-        tempoDePreparo={receita.tempo_preparo}
-        rendimento={receita.rendimento}
-      />
+      <Cabecalho titulo = {receita.titulo} descricao = {receita.descricao} />
+      <Imagem src ="https://github.com/mikansc.png" alt = "Michael" />
+      <Ingredientes ingrediente = {receita.ingredientes} />
+      <Instrucoes lista = {receita.preparo} />
+      <Rodape tempoDePreparo = {receita.tempo_preparo} rendimento = {receita.rendimento} />
     </div>
+
   );
 };
 
