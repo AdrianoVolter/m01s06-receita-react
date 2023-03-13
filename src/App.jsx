@@ -10,11 +10,20 @@ import "./App.css";
 
 const App = () => {
 
-  const receita = receitas[2];
+  const [pagina, setPagina] = useState(0);
+  const [receita, setReceita] = useState(receitas[pagina]);
+
+  function proximaReceita() {
+    setPagina(pagina + 1);
+    setReceita(receitas[pagina]);
+  }
+
 
   return (
 
     <div>
+      <button >Aterior</button>
+      <button onClick={proximaReceita}>Proximo</button>
       <Cabecalho titulo = {receita.titulo} descricao = {receita.descricao} />
       <Imagem src ="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqeDJ_gAyqBORKds4WNfHs3rSnqfsfp3lF-YsfQGUtcsZkmS6pHVC01tylhGUF7xqmSHg&usqp=CAU" alt = "Adriano" />
       <Ingredientes ingrediente = {receita.ingredientes} />
