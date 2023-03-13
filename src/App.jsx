@@ -4,6 +4,8 @@ import Instrucoes from "./Instrucoes";
 import Ingredientes from "./Ingredientes";
 import Rodape from "./Rodape";
 import receitas from "./receitas.json";
+import{useState} from "react";
+
 import "./App.css";
 
 const App = () => {
